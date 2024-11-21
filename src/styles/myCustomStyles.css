@@ -5,6 +5,21 @@
 body{
     background-color: aliceblue;
 }
-h1{
-    color: blue;
+@keyframes coolAnimation {
+    0% {
+        color: blue;
+        transform: scale(1);
+    }
+    50% {
+        color: red;
+        transform: scale(1.2);
+    }
+    100% {
+        color: blue;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    animation: coolAnimation 3s infinite;
 }
