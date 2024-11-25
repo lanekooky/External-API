@@ -1,10 +1,5 @@
 /* Diagnostic Styling */
-* {
-    outline: 1px dotted gray;
-}
-body{
-    background-color: aliceblue;
-}
+
 @keyframes coolAnimation {
     0% {
         color: blue;
