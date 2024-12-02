@@ -18,11 +18,11 @@ import { quotelessJson } from "astro:schema";
 <div class="diff aspect-[16/9]">
   <div class="diff-item-1">
     <div class="bg-primary text-primary-content grid place-content-center text-2xl font-black">
-      {quote.quote}
+      {`${quote.quote}`}
     </div>
   </div>
   <div class="diff-item-2">
-    <div class="bg-base-200 grid place-content-center text-4xl font-black"> By: {quote.author}</div>
+    <div class="bg-base-200 grid place-content-center text-4xl font-black"> {`By: ${quote.author}`}</div>
   </div>
   <div class="diff-resizer"></div>
 </div>
