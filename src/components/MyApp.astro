@@ -1,4 +1,6 @@
 ---
+import { quotelessJson } from "astro:schema";
+
 
 
 
@@ -6,53 +8,29 @@
 
     const response = await fetch('https://programming-quotesapi.vercel.app/api/random');
     const quote = await response.json();
-   
+    //const quote = "This is a very long quote";
+    //const author = "Lane Keck";
 
 
 ---
 
 
-
-
-
-  <section class="bg-gray-500 p-4">
-    <h1 class = "text-center text-primary text-2xl">Stay a Motivated Programmer!</h1>
-    </section>
-
-    <section class="bg-blue-500 p-4">
-      <h2 class="text-center text-lime-800 text-xl">{quote.quote}</h2>
-      <p class="text-center text-rose-500 text-xl">By: {quote.author}</p>
-    </section>
-  
-
-
-
-  
-<!--
-<div class="overflow-x-auto">
-  <table class="table">
-     head 
-    <thead>
-    <tr>
-      <th>Color Name</th>
-      <th>Color Group</th>
-      <th>Color Number</th>
-      
-    </tr>
-    </thead>
-    <tbody>
-    {
-     
-    allTheColors.colors.map( color =>
-    <tr style={`background: #${color.hex}`}>
-      <td>{color.name}</td>
-      <td>{color.group}</td>
-      <td><code>{color.hex}</code></td>
-    </tr>
-        )
-     
-  }
-    </tbody>
-  </table>
+<div class="diff aspect-[16/9]">
+  <div class="diff-item-1">
+    <div class="bg-primary text-primary-content grid place-content-center text-2xl font-black">
+      {quote.quote}
+    </div>
   </div>
--->
+  <div class="diff-item-2">
+    <div class="bg-base-200 grid place-content-center text-4xl font-black"> By: {quote.author}</div>
+  </div>
+  <div class="diff-resizer"></div>
+</div>
+
+
+
+  
+
+
+
+  
